@@ -6,7 +6,7 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
 
 ## Rotas
 
-### Criar um Filme
+### Criar 
 
 - **Endpoint:** `POST /movies`
 - **Descrição:** Cria um novo filme.
@@ -29,7 +29,7 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
 "Diretor não pode ser vazio" - Se o campo diretor estiver vazio.
 "Gênero não pode ser vazio" - Se o campo genero estiver vazio.
 
-### Listar Todos os Filmes
+### Listar 
 
 - **Endpoint:** GET /movies
 - **Descrição:** Lista todos os filmes no banco de dados.
@@ -44,7 +44,7 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
   200 OK - Detalhes do filme em formato JSON.
   404 Not Found - Se o filme com o ID especificado não for encontrado.
 
-### Atualizar um Filme
+### Atualizar 
 
 - **Endpoint:** PUT /movies/{id}
 - **Descrição:** Atualiza os detalhes de um filme existente.
@@ -61,7 +61,7 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
   200 OK - O filme foi atualizado com sucesso.
   404 Not Found - Se o filme com o ID especificado não for encontrado.
 
-### Deletar um Filme 
+### Deletar  
 
 - **Endpoint:** DELETE /movies/{id}
 - **Descrição:** Deleta um filme pelo ID.
@@ -69,7 +69,8 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
 204 No Content - O filme foi deletado com sucesso.
 404 Not Found - Se o filme com o ID especificado não for encontrado.
   
-### Avaliar um Filme
+### Avaliar 
+
 - **Endpoint:** PATCH /movies/{id}/rate
 - **Descrição:** Avalia um filme pelo ID.
 - **Parâmetros de Query:**
