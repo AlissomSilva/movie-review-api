@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MovieRepository extends JpaRepository<Movie, Long> {
-    // Aqui você pode adicionar consultas personalizadas, se necessário
+    
 }
