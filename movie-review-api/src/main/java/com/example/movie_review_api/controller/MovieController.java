@@ -2,6 +2,7 @@ package com.example.movie_review_api.controller;
 
 import com.example.movie_review_api.service.MovieService;
 import com.example.movie_review_api.model.Movie;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +19,7 @@ public class MovieController {
     private MovieService movieService;
 
     @PostMapping
-    public ResponseEntity<Movie> createMovie(@RequestBody Movie movie) {
+    public ResponseEntity<Movie> createMovie(@Valid @RequestBody Movie movie) {
         Movie savedMovie = movieService.saveMovie(movie);
         return new ResponseEntity<>(savedMovie, HttpStatus.CREATED);
     }

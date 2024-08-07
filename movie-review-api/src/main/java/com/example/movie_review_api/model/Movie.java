@@ -1,18 +1,27 @@
 package com.example.movie_review_api.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+
 
 import javax.annotation.processing.Generated;
-
+@Entity
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "Título não pode ser vazio")
     private String titulo;
+    @NotBlank(message = "Descrição não pode ser vazio")
     private String descricao;
+    @NotBlank(message = "Diretor não pode ser vazio")
     private String diretor;
+    @NotBlank(message = "Gênero não pode ser vazio")
     private String genero;
     private Double rating;
 
