@@ -24,11 +24,6 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
   201 Created - O filme foi criado com sucesso.
   400 Bad Request - Se algum campo obrigatório estiver faltando ou inválido. Mensagens de erro podem incluir:
 
-"Título não pode ser vazio" - Se o campo titulo estiver vazio.
-"Descrição não pode ser vazio" - Se o campo descricao estiver vazio.
-"Diretor não pode ser vazio" - Se o campo diretor estiver vazio.
-"Gênero não pode ser vazio" - Se o campo genero estiver vazio.
-
 ### Listar 
 
 - **Endpoint:** GET /movies
@@ -89,6 +84,13 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
 
 ### Tratamento de Erro
 A API valida os campos obrigatórios utilizando as anotações @NotBlank e @NotNull. Se algum campo obrigatório estiver faltando ou inválido, a resposta será 400 Bad Request com uma mensagem de erro indicando qual campo está faltando.
+"Título não pode ser vazio" - Se o campo titulo estiver vazio.
+
+"Descrição não pode ser vazio" - Se o campo descricao estiver vazio.
+
+"Diretor não pode ser vazio" - Se o campo diretor estiver vazio.
+
+"Gênero não pode ser vazio" - Se o campo genero estiver vazio.
 
 ### Banco de Dados
 A aplicação utiliza o banco de dados H2, que é um banco de dados em memória. Isso permite que a aplicação armazene e recupere os dados dos filmes durante a execução.
