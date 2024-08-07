@@ -6,7 +6,7 @@ Esta API REST permite gerenciar filmes, incluindo funcionalidades para criar, at
 
 ## Rotas
 
-### 1. Criar um Filme
+### Criar um Filme
 
 - **Endpoint:** `POST /movies`
 - **Descrição:** Cria um novo filme.
